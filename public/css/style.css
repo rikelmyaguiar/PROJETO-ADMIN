@@ -1,0 +1,187 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  color: #000;
+  text-align: center;
+  font-size: 48px;
+  margin-top: 20px;
+}
+
+.conteiner {
+  background-color: #d33030;
+  width: 90%;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 40px auto;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.pedido-info {
+  background-color: #fff;
+  border-radius: 12px;
+  border: 1px solid #292929;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 15px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.item-pedido {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.produto-imagem {
+  width: 140px;
+  height: 140px;
+  border-radius: 10px;
+  object-fit: cover;
+  margin-bottom: 15px;
+  margin-top: 10px;
+}
+
+.pedido-detalhes {
+  flex: 1;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: white;
+}
+
+.pedido-detalhes p {
+  font-size: 15px;
+  color: #333;
+  margin-bottom: 6px;
+}
+
+.pedido-detalhes strong {
+  font-size: 16px;
+  font-weight: bold;
+  color: #111;
+}
+
+.status {
+  font-size: 13px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  padding: 5px 10px;
+  border-radius: 6px;
+  display: inline-block;
+  width: fit-content;
+}
+
+.status-pendente {
+  background-color: #ffc107;
+  color: #000;
+}
+
+.status-entregue {
+  background-color: #4caf50;
+  color: white;
+}
+
+.status-cancelado {
+  background-color: #f44336;
+  color: white;
+}
+
+.pedido-botoes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.pedido-botoes button {
+  width: 150px;
+  height: 40px;
+  font-size: 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.btn-mandar-entrega {
+  background-color: #616161;
+  color: white;
+}
+
+.btn-mandar-entrega:hover {
+  background-color: #424242;
+}
+
+.btn-cancelar {
+  background-color: #d61f12;
+  color: white;
+}
+
+.btn-cancelar:hover {
+  background-color: #8f100e;
+}
+
+.btn-remover-item{
+  background-color: rgb(187, 20, 20);
+  color: white;
+  margin-bottom: 20px;
+  width: 100px;
+  height: 30px;
+  font-size: 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.btn-remover-item:hover {
+  background-color: rgb(133, 13, 13);
+}
+
+.total-pedido {
+  margin-top: 10px;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .pedido-info {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .produto-imagem {
+    width: 100px;
+    height: 100px;
+  }
+
+  .pedido-detalhes {
+    padding-left: 0;
+    margin-top: 10px;
+  }
+
+  .pedido-detalhes p {
+    font-size: 12px;
+  }
+
+  .pedido-botoes button {
+    font-size: 12px;
+    padding: 8px;
+  }
+}
